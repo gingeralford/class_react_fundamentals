@@ -1,15 +1,19 @@
 
 import './App.css';
-import Header from './components/Header';
-import Home from './components/Home';
-import Footer from './components/Footer';
+
+import NameProp from './components/NameProp';
+import Contacts from './components/Contacts';
+import State from './components/State';
+
+const person1 = { name: "Jason Freeman", age: 35, school: "Hard Knocks", graduationYear: "2029"};
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Home />
-      <Footer />
+      <NameProp name="Ginger" /> {/* Mounting Component */}
+      <Contacts {...person1} />
+      <p>----------------------------------</p>
+      <State />
     </div>
   );
 }
